@@ -11,9 +11,10 @@
 <html>
 <head>
 	<title>Bob's Auto Parts - Order Results</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<h1 style="font-family:helvetica">Bob's Auto Parts</h1>
+<h1 style="font-family: 'Open Sans', sans-serif;">Bob's Auto Parts</h1>
 <h2>Order Results</h2>
 	<?php
 

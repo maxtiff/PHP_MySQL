@@ -22,23 +22,24 @@
 	<form action="processorder.php" method="post">
 	<table border="0">
 	<tr bgcolor="#cccccc">
-		<td width="150">Item</td>
-		<td width="15">Quantity</td>
+		<td style="font-size: 18px; font-family: 'Open Sans', sans-serif;" width="150">Item</td>
+		<td style="font-size: 18px; font-family: 'Open Sans', sans-serif;" width="15">Quantity</td>
 	</tr>
 
 	<?php
 
-		$products = array('Tires' => tireqty, 'Oil' => oilqty, 'Spark Plugs' => sparkqty);
+		$products = array('Tires' => 'tireqty', 'Oil' => 'oilqty', 'Spark Plugs' => 'sparkqty');
 
 		foreach ($products as $items => $var) 
 		{
 			echo "<tr>";
-			echo "<td>$items</td>";
+			echo "<td style=\"font-size: 18px; font-family: 'Open Sans', sans-serif;\">$items</td>";
 			echo "<td align=\"left\"><input type=\"text\" name=\"$var\" size=\"3\" maxlength=\"3\" /></td>";
 			echo "</tr>";
 		}
+
 	?>
-	<tr>
+	<!-- <tr>
 		<td>Tires</td>
 		<td align="left"><input type="text" name="tireqty" size="3"
 			maxlength="3" /></td>
@@ -52,9 +53,9 @@
 		<td>Spark Plugs</td>
 		<td align="left"><input type="text" name="sparkqty" size="3"
 			maxlength="3" /></td>
-	</tr>
+	</tr> -->
 	<tr>
-		<td>Address</td>
+		<td style="font-size: 18px; font-family: 'Open Sans', sans-serif;">Address</td>
 		<td align="center"><input type="text" name="addy" size="40"
 			maxlength="40" /></td>
 	</tr>
