@@ -39,21 +39,7 @@
 		}
 
 	?>
-	<!-- <tr>
-		<td>Tires</td>
-		<td align="left"><input type="text" name="tireqty" size="3"
-			maxlength="3" /></td>
-	</tr>
-	<tr>
-		<td>Oil</td>
-		<td align="left"><input type="text" name="oilqty" size="3"
-			maxlength="3" /></td>
-	</tr>
-	<tr>
-		<td>Spark Plugs</td>
-		<td align="left"><input type="text" name="sparkqty" size="3"
-			maxlength="3" /></td>
-	</tr> -->
+	
 	<tr>
 		<td style="font-size: 18px; font-family: 'Open Sans', sans-serif;">Address</td>
 		<td align="center"><input type="text" name="addy" size="40"

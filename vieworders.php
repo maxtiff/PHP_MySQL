@@ -1,7 +1,11 @@
 <?php
 	
 	//establish short variable name
-	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT']
+	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+
+	$orders = file("$DOCUMENT_ROOT/bob/orders/orders.txt");
+
+	$number_of_orders = count($orders);
 
 ?>
 <html>
@@ -12,32 +16,17 @@
 		<h2>Customer Orders</h2>
 
 		<?php
-
-			@$fp = fopen("$DOCUMENT_ROOT/bob/orders/orders.txt", 'rb');
-
-			if (!$fp)
+			
+			if ($number_of_orders == 0)
 			{
 				echo "<p><strong>There are no orders pending. Please try again later.</strong></p>";
-				exit;
 			}
 
-			flock($fp, LOCK_SH);
-
-			while (!feof($fp))
+			for ($i=0; $i < $number_of_orders; $i++) 
 			{
-				$order = fgets($fp, 999);
-				echo $order."<br />";
+				echo $orders[$i]."<br />";
 			}
 
-			echo 'Final position of the file pointer is '.(ftell($fp));
-			echo '<br />';
-			rewind($fp);
-			echo 'After rewind, the position is '.(ftell($fp));
-			echo '<br />';
-
-			flock($fp, LOCK_UN);
-
-			fclose($fp);
 		?>
 	</body>
 </html>
