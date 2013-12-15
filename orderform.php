@@ -11,20 +11,20 @@
 		border: 0;
 	}
 	td {
-		font-size: 18px;
+	  	font-size: 18px;
 		font-family: 'Open Sans', sans-serif;
 	}
 	input {
-      border: 2 solid gray;
-      border-radius: 3;
-      padding: 10px;
-      font-size: 18px;
+		border: 2 solid gray;
+		border-radius: 3;
+		padding: 10px;
+		font-size: 18px;
     }
     input[type="submit"] {
-      border: 0;
-      border-radius: 0;
-      background: red;
-      color: white;
+      	border: 0;
+      	border-radius: 3;
+      	background: red;
+      	color: white;
     }
     </style>
 </head>

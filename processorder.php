@@ -1,9 +1,9 @@
 <?php
 	// Create short variable names
-	$tireqty = $_POST['tireqty'];
-	$oilqty = $_POST['oilqty'];
-	$sparkqty = $_POST['sparkqty'];
-	$addy = $_POST['addy'];
+	$tireqty = trim($_POST['tireqty']);
+	$oilqty = trim($_POST['oilqty']);
+	$sparkqty = trim($_POST['sparkqty']);
+	$addy = trim($_POST['addy']);
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 	$date = date('H:i, jS F Y');
 ?>
@@ -64,7 +64,7 @@
 								 
 		$totalamount=number_format($totalamount, 2, '.', ' ');
 
-		echo "<p>Total of order is $".$totalamount."</p>";
+		printf("<p>Total of order is $%.2f.</p>", $totalamount);
 		echo "<p>Address to ship to is ".$addy."</p>";
 
 		$outputstring = $date."\t".$tireqty." tires\t".$oilqty." oil\t"
