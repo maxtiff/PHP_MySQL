@@ -3,6 +3,17 @@
 	<title>Bob's Auto Parts</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<style>
+	p {
+		font-size: 40px;
+		font-family: 'Open Sans', sans-serif;
+	}
+	table {
+		border: 0;
+	}
+	td {
+		font-size: 18px;
+		font-family: 'Open Sans', sans-serif;
+	}
 	input {
       border: 2 solid gray;
       border-radius: 3;
@@ -17,13 +28,13 @@
     }
     </style>
 </head>
-<p style="font-size: 40px; font-family: 'Open Sans', sans-serif;">Bob's Auto Parts</p>
+<p>Bob's Auto Parts</p>
 <body>
 	<form action="processorder.php" method="post">
-	<table border="0">
-	<tr bgcolor="#cccccc">
-		<td style="font-size: 18px; font-family: 'Open Sans', sans-serif;" width="150">Item</td>
-		<td style="font-size: 18px; font-family: 'Open Sans', sans-serif;" width="15">Quantity</td>
+	<table>
+	<tr>
+		<td bgcolor = "#cccccc" width="150">Item</td>
+		<td bgcolor = "#cccccc" width="15">Quantity</td>
 	</tr>
 
 	<?php
@@ -33,15 +44,15 @@
 		foreach ($products as $items => $var) 
 		{
 			echo "<tr>";
-			echo "<td style=\"font-size: 18px; font-family: 'Open Sans', sans-serif;\">$items</td>";
+			echo "<td>$items</td>";
 			echo "<td align=\"left\"><input type=\"text\" name=\"$var\" size=\"3\" maxlength=\"3\" /></td>";
 			echo "</tr>";
 		}
 
 	?>
-	
+
 	<tr>
-		<td style="font-size: 18px; font-family: 'Open Sans', sans-serif;">Address</td>
+		<td>Address</td>
 		<td align="center"><input type="text" name="addy" size="40"
 			maxlength="40" /></td>
 	</tr>
